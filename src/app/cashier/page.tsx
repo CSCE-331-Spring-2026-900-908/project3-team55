@@ -73,14 +73,14 @@ export default function Home() {
       {/* Right current order panel */}
       <div className="right-panel">
         <h2>CURRENT SALE</h2>
-        <ul style={{ flex: 1, overflowY: "auto", padding: 0, listStyle: "none" }}>
+        <ul className="sale-items">
           {currentOrder.map((item, idx) => (
             <li key={idx}>
               {item.name} - ${item.cost.toFixed(2)}
             </li>
           ))}
         </ul>
-        <button onClick={chargeOrder} style={{ padding: "0.5rem", backgroundColor: "#4CAF50", color: "white" }}>
+        <button onClick={chargeOrder} className="charge-button">
           Charge
         </button>
       </div>
