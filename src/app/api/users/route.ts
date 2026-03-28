@@ -3,6 +3,7 @@ import pool from '@/src/lib/db';
 import Employee from '@/src/lib/types';
 
 // API endpoint for Managers to access, create, and manipulate Employee Data
+// Only managers should be able to access any of these
 
 // Retrieves a list of users' names, employee types, and employee IDs
 export async function GET() {
