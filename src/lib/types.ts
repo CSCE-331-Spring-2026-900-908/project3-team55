@@ -5,3 +5,15 @@ export default interface Employee {
   password: string,
   employee_type: string,
 }
+
+export default interface MenuItem {
+  name: string  
+  cost: number,
+  active: boolean,
+  seasonal_menu_item: boolean
+}
+
+export default interface LoginCreds {
+  id: number,
+  password: string
+}
