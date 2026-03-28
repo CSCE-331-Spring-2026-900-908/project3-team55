@@ -45,6 +45,7 @@ export async function PUT(request: NextRequest) {
   return new NextResponse(null, {status: 201});
 }
 
+// Deletes an existing user from the database
 export async function DELETE(request: NextRequest) {
   const empl: Employee = await request.json();
 
