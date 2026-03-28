@@ -1,5 +1,5 @@
 "use client"; //react or whatever
-
+import "./cashier.css";
 import { useState, useEffect, use } from 'react';
 
 
@@ -42,9 +42,9 @@ export default function Home() {
   };
   
   return (
-    <div style ={{ display: 'flex', minHeight: '100vh', fontFamily: "sans-serif" }}>
+    <div className="cashier-container">
         {/* Left navigation panel */}
-      <div style={{ width: "250px", background: "#f0f0f0", padding: "1rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
+      <div className="left-panel">
         <h2>CASHIER MENU</h2>
         <button>Place Orders</button>
         <button>Previous Orders</button>
@@ -55,13 +55,13 @@ export default function Home() {
       </div>
 
       {/* Center menu items */}
-      <div style={{ flex: 1, padding: "1rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
+      <div className="center-panel">
         <h2>Menu</h2>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+        <div className="menu-buttons">
           {menuItems.map((item, idx) => (
             <button
               key={idx}
-              style={{ padding: "1rem", minWidth: "120px" }}
+              className="menu-button"
               onClick={() => addToOrder(item)}
             >
               {item.name} - ${item.cost.toFixed(2)}
@@ -71,7 +71,7 @@ export default function Home() {
       </div>
 
       {/* Right current order panel */}
-      <div style={{ width: "250px", background: "#f7f7f7", padding: "1rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
+      <div className="right-panel">
         <h2>CURRENT SALE</h2>
         <ul style={{ flex: 1, overflowY: "auto", padding: 0, listStyle: "none" }}>
           {currentOrder.map((item, idx) => (
